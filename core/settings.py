@@ -1,6 +1,9 @@
 import os
 from pathlib import Path
 
+from decouple import Csv, config
+from dj_database_url import parse as db_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'login',
     'radiocomunicacao',
 ]
@@ -60,16 +64,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+DATABASE_URL='postgres://postgres:142924d0@localhost/municipios'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': config('DATABASE_URL', cast=db_url)
 }
+DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 
 
 # Password validation
