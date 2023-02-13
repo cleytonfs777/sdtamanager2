@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'head' %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<link rel="stylesheet" href="{% static 'rmapas/css/maps.css' %}">
+<link rel="stylesheet" href="{% static 'rmapas/css/controls.css' %}">
+{% endblock %}
+{% block content %}
+<div id="map"></div>
+{% endblock %}
+{% block 'script' %}
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<script src="{% static 'rmapas/js/maps.js' %}"></script>
+<script src="{% static 'rmapas/js/controls.js' %}"></script>
+{% endblock %}

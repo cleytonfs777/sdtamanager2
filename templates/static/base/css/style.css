@@ -1,0 +1,154 @@
+:root {
+    --primary-color: rgb(0, 56, 109);
+    --secondary-color: rgb(1, 19, 78);
+    --other-color: rgb(56, 146, 250);
+    --backgroundn-color: rgb(167, 29, 29);
+    --main-color:rgb(164, 209, 252);
+    --green-color:rgb(7, 71, 7);
+    --light-gray-color: #cccccc;
+    --medium-gray-color: #999;
+    --dark-gray-color: #444;
+    --white-color: #fff;
+    --gap: 3rem;
+  }
+
+html {
+    min-width: 100%;
+  }
+
+
+body {
+    background: #eeeeee;
+    display: flex;
+    min-width: 330px;
+    height: 100%;
+}
+
+.side{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+
+ul {
+    transition: all 5s linear!important;
+}
+
+#side_nav {
+    background: var(--primary-color);
+    min-width: 250px;
+    max-width: 250px;
+
+}
+
+.content {
+    min-height: 100vh;
+    width: 100%;
+}
+hr.h-color {
+    background: #eee;
+    padding: 1px;
+}
+
+.sidebar li a.active {
+    background: #eee;
+    border-radius: 8px;
+}
+
+.sidebar li a.active, .sidebar li a.active:hover {
+    color: var(--primary-color);
+}
+
+.sidebar li a {
+color: #fff;
+}
+
+.submenu {
+    background: var(--secondary-color);
+}
+.submenu:hover {
+    background: var(--other-color);
+}
+
+.sidebar ul ul {
+    transition: all 0.7s ease-out!important;
+    display: none;
+}
+
+.sidebar ul .itensRadio.mostra{
+    display: block;    
+}
+.sidebar ul .itensTelecom.mostra{
+    display: block;
+    
+}
+.sidebar ul .itensFinan.mostra{
+    display: block;
+    
+}
+.sidebar ul .itensDocs.mostra{
+    display: block;
+    
+}
+.sidebar ul .itensLogis.mostra{
+    display: block;
+    
+}
+.sidebar ul .itensCatal.mostra{
+    display: block;
+    
+}
+.sidebar ul .itensLicit.mostra{
+    display: block;
+    
+}
+.sidebar ul .itensLegis.mostra{
+    display: block;
+    
+}
+.bg-main {
+    background: var(--main-color);
+}
+.container.main-content-all {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sidebar ul {
+    overflow: auto;
+}
+#side_nav {
+    max-height: 100vh;
+    overflow: auto;
+}
+
+
+
+@media(max-width: 1000px) {
+    #side_nav{
+        margin-left: -250px;
+        position: fixed;
+        min-height: 100vh;
+        z-index: 1;
+    }
+    #side_nav.active{
+        margin-left: 0;
+    }
+    .navbar-toggler{
+        opacity: 1;
+    }
+    body > div.main-container {
+        position: absolute;
+        z-index: 1000;
+    }
+    
+    #map {
+        position: absolute;
+        z-index: 1;
+    }
+    
+}

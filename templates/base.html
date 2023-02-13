@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- Primary Meta Tags -->
+  <title>{% block title %}{% endblock title %}</title>
+  <!-- CSS DO BOOTSPTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- MEU CSS -->
+  <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+  {% block 'head' %}{% endblock %}
+
+</head>
+
+<body>
+  <!-- SIDE BAR -->
+  <div class="main-container">
+    <div class="sidebar side" id="side_nav">
+      <div class="header-box pt-3 pb-2 d-flex justify-content-between align-items-center me-1">
+        <h1 class="fs-4 text-center"><span class="rouded shadow px-2 me-2">
+        </span><span class="text-white"><a href="#" class="text-decoration-none text-white">PAINEL</a></span></h1>
+        <button class="btn close-btn d-md-none px-1 py-0 text-white"><i class="bi bi-x-square"></i></button>
+        
+      </div>
+      <ul class="list-unstyled px-2">
+        <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block active fw-bold radio "><i class="m-2 bi bi-broadcast-pin"></i> Radiocomunicação</a>
+        <ul class="list-unstyled px-2 mylist itensRadio">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Mapas</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Projetos</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Pendências</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Redistribuição</a></li>
+        </ul>
+        </li>
+          
+          <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold telecom "><i class="m-2 bi bi-telephone-forward"></i> Telecomunicação</a>
+        <ul class="list-unstyled px-2 mylist itensTelecom">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Mapas</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Contas</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Projetost</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Pendências</a></li>
+        </ul>
+        </li>
+          
+          <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold finan "><i class="m-2 bi bi-currency-dollar"></i> Gestão Financeira</a>
+        <ul class="list-unstyled px-2 mylist itensFinan">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Despesa/Receita</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">text</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">text</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Gerador DSP</a></li>
+        </ul>
+        </li>
+          
+          <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold docs "><i class="m-2 bi bi-file-earmark"></i> Gestão de Documentos</a>
+        <ul class="list-unstyled px-2 mylist itensDocs">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Telecom</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Radio</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Terceiros</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Gerais</a></li>
+        </ul>
+        </li>
+          
+          <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold logis "><i class="m-2 bi bi-truck"></i> Gestão Logística</a>
+        <ul class="list-unstyled px-2 mylist itensLogis">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Distribuição</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Estoques</a></li>
+        </ul>
+        </li> 
+          <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold catal "><i class="m-2 bi bi-journal"></i> Catálogo</a>
+        <ul class="list-unstyled px-2 mylist itensCatal">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Radio</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Telecom</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Audiovisuais</a></li>          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Outros</a></li>
+        </ul>
+        </li>
+          
+          <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold licit "><i class="m-2 bi bi-hammer"></i> Licitações</a>
+        <ul class="list-unstyled px-2 mylist itensLicit">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Registro de Preço</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Pregões</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Contratos</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Outros</a></li>
+        </ul>
+        </li>
+          
+          <li class="">
+          <a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold legis "><i class="m-2 bi bi-book"></i> Legislação</a>
+        <ul class="list-unstyled px-2 mylist itensLegis">
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Telecom</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Radio</a></li>
+          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Outros</a></li>
+        </ul>
+        </li>
+      </ul>
+      
+      <hr class="h-color mx-2">
+      <ul class="list-unstyled px-2">
+        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold "><i class="m-2 bi bi-gear"></i> Configurações</a></li>
+        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block fw-bold "><i class="m-2 bi bi-bell"></i> Notificações</a></li>
+    </div>
+  </div>
+  <div class="content d-flex flex-column ">
+    <nav class="navbar navbar-expand-lg navbar-light w-100 bg-main">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-around w-100">
+          <a href="#" class="text-decoration-none d-block">
+          <img src="{% static 'base/images/racer_icon_n.png' %}" alt="" width='50px' height='50px'>
+          </a>
+          <div class="d-flex flex-column ">
+            <a class="navbar-brand fw-bold border-bottom border-primary mb-0 p-0" href="#">Radiocomunicação</a>
+            <span></span>
+          </div>
+            <button class="navbar-toggler my-tootle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+          </div>
+      </div>
+    </nav>
+    <div class="container main-content-all">
+  <!-- SIDE BAR -->
+  {% block content %}{% endblock %}
+  <!-- SIDE BAR -->
+    </div>
+  </div>
+  </div>
+
+    <!-- MEU JS -->
+    {% block 'script' %}{% endblock %}
+    <!-- JS DO BOOTSPTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="{% static 'base/js/script.js' %}"></script>
+  </body>
+
+</html>
