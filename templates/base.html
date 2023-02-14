@@ -22,15 +22,15 @@
     <div class="sidebar side" id="side_nav">
       <div class="header-box pt-3 pb-2 d-flex justify-content-between align-items-center me-1">
         <h1 class="fs-4 text-center"><span class="rouded shadow px-2 me-2">
-        </span><span class="text-white"><a href="#" class="text-decoration-none text-white">PAINEL</a></span></h1>
+        </span><span class="text-white"><a href="{% url 'login' %}" class="text-decoration-none text-white">PAINEL</a></span></h1>
         <button class="btn close-btn d-md-none px-1 py-0 text-white"><i class="bi bi-x-square"></i></button>
         
       </div>
-      <ul class="list-unstyled px-2">
+      <ul class="list-unstyled px-2" id="first-ul">
         <li class="">
           <a href="#" class="text-decoration-none px-3 py-2 d-block active fw-bold radio "><i class="m-2 bi bi-broadcast-pin"></i> Radiocomunicação</a>
         <ul class="list-unstyled px-2 mylist itensRadio">
-          <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Mapas</a></li>
+          <li><a href="{% url 'mapa' %}" class="text-decoration-none px-3 py-2 d-block submenu">Mapas</a></li>
           <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Projetos</a></li>
           <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Pendências</a></li>
           <li><a href="#" class="text-decoration-none px-3 py-2 d-block submenu">Redistribuição</a></li>

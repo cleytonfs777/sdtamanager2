@@ -14,6 +14,7 @@
 
 html {
     min-width: 100%;
+    scroll-behavior: smooth;
   }
 
 
@@ -32,14 +33,12 @@ body {
 
 }
 
-ul {
-    transition: all 5s linear!important;
-}
 
 #side_nav {
     background: var(--primary-color);
     min-width: 250px;
     max-width: 250px;
+    
 
 }
 
@@ -73,12 +72,14 @@ color: #fff;
 }
 
 .sidebar ul ul {
-    transition: all 0.7s ease-out!important;
     display: none;
-}
 
+}
 .sidebar ul .itensRadio.mostra{
-    display: block;    
+    display: block;
+
+    
+   
 }
 .sidebar ul .itensTelecom.mostra{
     display: block;
@@ -118,12 +119,14 @@ color: #fff;
     flex-grow: 1;
 }
 
-.sidebar ul {
-    overflow: auto;
+#first-ul {
+    overflow-x: auto;
+    
 }
 #side_nav {
     max-height: 100vh;
-    overflow: auto;
+    
+
 }
 
 
@@ -134,6 +137,7 @@ color: #fff;
         position: fixed;
         min-height: 100vh;
         z-index: 1;
+        
     }
     #side_nav.active{
         margin-left: 0;
