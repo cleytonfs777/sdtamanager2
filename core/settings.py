@@ -34,6 +34,10 @@ INSTALLED_APPS = [
     'login',
     'radiocomunicacao',
     'municipios',
+    'torres',
+    'leaflet',
+    'djgeojson',
+
 ]
 
 MIDDLEWARE = [
@@ -119,3 +123,16 @@ STATIC_ROOT = os.path.join('static')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LEAFLET_CONFIG = {
+    'SPATIAL_EXTENT': (
+        -52.785611690552386, -24.24943347856977,
+        -35.26592495689231, -13.14318542725739,
+
+    ),
+    'TILES': [('GStreets', 'http://www.google.cn/maps/vt?lyrs=m@189&gl=cn&x={x}&y={y}&z={z}',
+               {'attribution': '&copy; Google'}),
+              ('GSatellite',
+               'http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}',
+               {'attribution': '&copy; Google'})]
+}

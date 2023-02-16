@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from djgeojson.views import GeoJSONLayerView
 
-# Create your views here.
+
+class MunicipiosGeojson(GeoJSONLayerView):
+    ...
